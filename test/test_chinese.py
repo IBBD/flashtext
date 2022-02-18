@@ -22,6 +22,10 @@ class TestDictionaryLoad(unittest.TestCase):
         keywords_found = keyword_processor.extract_keywords('ABC测试DFE')
         self.assertEqual(keywords_found, ['测试'], "Failed 3")
 
+        keyword_processor.add_keyword('小鹏')
+        keywords_found = keyword_processor.extract_keywords('小鹏P7')
+        self.assertEqual(keywords_found, ['小鹏'], "Failed 4")
+
 if __name__ == '__main__':
     unittest.main()
 

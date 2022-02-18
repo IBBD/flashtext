@@ -818,3 +818,6 @@ if __name__ == "__main__":
     assert keywords_found == ["测试"]
     keywords_found = keyword_processor.extract_keywords('sadfsa测试sadfswesadf123123')
     assert keywords_found == ["测试"]
+    keyword_processor.add_keyword('小鹏')
+    keywords_found = keyword_processor.extract_keywords('小鹏P7')
+    assert keywords_found == ["小鹏"]
