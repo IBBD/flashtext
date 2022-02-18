@@ -32,6 +32,7 @@ Installation
 
     $ pip install flashtext
 
+20220218 说明：经测试这样安装对中文的匹配是有问题的（测试代码见：test/test_chinese.py），直接从源码安装则没问题：`python setup.py install`
 
 API doc
 -------

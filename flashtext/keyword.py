@@ -48,7 +48,7 @@ class KeywordProcessor(object):
             self.non_word_boundaries = set(string.digits + string.letters + '_')
         except AttributeError:
             # python 3.x
-            self.non_word_boundaries = set(string.digits + string.ascii_letters + '_')
+            self.non_word_boundaries = set('_')
         self.keyword_trie_dict = dict()
         self.case_sensitive = case_sensitive
         self._terms_in_trie = 0
@@ -805,3 +805,16 @@ class KeywordProcessor(object):
         elif isinstance(node, dict) and min(new_rows) <= max_cost:
             for new_char, new_node in node.items():
                 yield from self._levenshtein_rec(new_char, new_node, word, new_rows, max_cost, depth=depth + 1)
+
+
+if __name__ == "__main__":
+    # Create an object of KeywordProcessor
+    keyword_processor = KeywordProcessor()
+    # add keywords
+    keyword_processor.add_keyword('测试')
+    keywords_found = keyword_processor.extract_keywords('简单测试')
+    assert keywords_found == ["测试"]
+    keywords_found = keyword_processor.extract_keywords('3测试')
+    assert keywords_found == ["测试"]
+    keywords_found = keyword_processor.extract_keywords('sadfsa测试sadfswesadf123123')
+    assert keywords_found == ["测试"]
