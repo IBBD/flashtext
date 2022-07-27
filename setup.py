@@ -29,7 +29,7 @@ except ImportError:
 setup(
     name=name,
     version=version,
-    url='http://github.com/vi3k6i5/flashtext',
+    url='http://github.com/ibbd/flashtext',
     author='Vikash Singh',
     author_email='vikash.duliajan@gmail.com',
     description='Extract/Replaces keywords in sentences.',

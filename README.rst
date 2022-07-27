@@ -32,9 +32,8 @@ Installation
 
     $ pip install git+https://github.com/IBBD/flashtext.git
 
-说明：原始版本对于中文或者数字字母等参杂的字符串处理有问题。
 
-单元测试脚本：`python test/test_chinese.py`
+test script: `python test/test_chinese.py`
 
 
 API doc
