@@ -30,9 +30,12 @@ Installation
 ------------
 ::
 
-    $ pip install flashtext
+    $ pip install git+https://github.com/IBBD/flashtext.git
 
-20220218 说明：经测试这样安装对中文的匹配是有问题的（测试代码见：test/test_chinese.py），直接从源码安装则没问题：`python setup.py install`
+说明：原始版本对于中文或者数字字母等参杂的字符串处理有问题。
+
+单元测试脚本：`python test/test_chinese.py`
+
 
 API doc
 -------
