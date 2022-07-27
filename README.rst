@@ -33,7 +33,9 @@ Installation
     $ pip install git+https://github.com/IBBD/flashtext.git
 
 
-test script: `python test/test_chinese.py`
+**原来的包有问题，可以直接安装这个。**
+
+单元测试脚本: `python test/test_chinese.py`
 
 
 API doc
